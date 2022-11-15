@@ -7,7 +7,7 @@ const data = {
       category: 'Conjunto',
       image: '/images/p1.PNG', // 679px × 829px
       price: 120,
-      countInStock: 10,
+      countInStock: 2,
       brand: 'moda&estilo',
       rating: 4.5,
       numReviews: 10,

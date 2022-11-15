@@ -13,7 +13,7 @@ const data = {
       description: 'high quality shirt',
     },
     {
-      name: 'Conjunto blanco',
+      name: 'Conjunto blancos',
       slug: 'conjunto-blanco-1',
       category: 'Conjunto',
       image: '/images/p2.PNG', // 679px
@@ -25,7 +25,7 @@ const data = {
       description: 'high quality product',
     },
     {
-      name: 'Conjunto blusa negra y falda jean',
+      name: 'Conjunto blusa negra y falda tela jean',
       slug: 'conjunto-negro-2',
       category: 'Conjunto',
       image: '/images/p3.PNG',

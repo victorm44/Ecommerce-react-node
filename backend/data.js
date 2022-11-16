@@ -4,7 +4,7 @@ const data = {
   products: [
     {
       //_id: '1',
-      name: 'Conjunto negro',
+      name: 'Top con falda',
       slug: 'conjunto-negro-1',
       category: 'Conjunto',
       image: '/images/p1.PNG', // 679px × 829px
@@ -13,7 +13,8 @@ const data = {
       brand: 'moda&estilo',
       rating: 4.5,
       numReviews: 10,
-      description: 'high quality shirt',
+      description:
+        'Hermoso crop top negro manga larga y minifalda en cuerina negro',
     },
     {
       //_id: '2',

@@ -1,7 +1,13 @@
-import { Link } from 'react-router-dom';
-import axios from 'axios';
 import { useEffect, useReducer, useState } from 'react';
+import axios from 'axios';
 import logger from 'use-reducer-logger';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Product from '../Components/Product';
+import { Helmet } from 'react-helmet-async';
+import LoadingBox from '../Components/LoadingBoxs';
+import MessageBox from '../Components/MessageBox';
+// import data from '../data';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -22,6 +28,7 @@ function HomeScreen() {
     loading: true,
     error: '',
   });
+  // const [products, setProducts] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
@@ -38,29 +45,23 @@ function HomeScreen() {
   }, []);
   return (
     <div>
-      <h1>Productos destacados</h1>
+      <Helmet>
+        <title>Moda y Estilo</title>
+      </Helmet>
+      <h1>Featured Products</h1>
       <div className="products">
         {loading ? (
-          <div>cargando...</div>
+          <LoadingBox />
         ) : error ? (
-          <div>{error}</div>
+          <MessageBox variant="danger">{error}</MessageBox>
         ) : (
-          products.map((product) => (
-            <div className="product" key={product.slug}>
-              <Link to={`/product/${product.slug}`}>
-                <img src={product.image} alt={product.name} />
-              </Link>
-              <div className="product-info">
-                <Link to={`/product/${product.slug}`}>
-                  <p>{product.name}</p>
-                </Link>
-                <p>
-                  <strong>${product.price}</strong>
-                </p>
-                <button>Añadir al carrito</button>
-              </div>
-            </div>
-          ))
+          <Row>
+            {products.map((product) => (
+              <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
+                <Product product={product}></Product>
+              </Col>
+            ))}
+          </Row>
         )}
       </div>
     </div>

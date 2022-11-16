@@ -1,7 +1,7 @@
 const data = {
   products: [
     {
-      _id: '1',
+      //_id: '1',
       name: 'Conjunto negro',
       slug: 'conjunto-negro-1',
       category: 'Conjunto',
@@ -14,7 +14,7 @@ const data = {
       description: 'high quality shirt',
     },
     {
-      _id: '2',
+      //_id: '2',
       name: 'Conjunto blanco',
       slug: 'conjunto-blanco-1',
       category: 'Conjunto',
@@ -27,7 +27,7 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '3',
+      //_id: '3',
       name: 'Conjunto blusa negra y falda tela jean',
       slug: 'conjunto-negro-2',
       category: 'Conjunto',
@@ -40,7 +40,7 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '4',
+      //_id: '4',
       name: 'Conjunto rosa y blanco',
       slug: 'conjunto-blanco-2',
       category: 'Conjunto',
